@@ -14,12 +14,12 @@ phases:
        - echo nothing to do  in the prebuild phase..
   build:
     commands:
-      - echo Build started on `date`
-      - pwd
-      - ls -lrta
-      - ls -lrt $CODEBUILD_SRC_DIR/settings.xml
-      - cp -pvr $CODEBUILD_SRC_DIR/settings.xml ~/.m2/settings.xml
-      - mvn install 
+       - echo Build started on `date`
+      #- pwd
+      #- ls -lrta
+      #- ls -lrt $CODEBUILD_SRC_DIR/settings.xml
+      #- cp -pvr $CODEBUILD_SRC_DIR/settings.xml ~/.m2/settings.xml
+       - mvn install 
   post_build:
     commands:
       - echo Build completed on `date`
