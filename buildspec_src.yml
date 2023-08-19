@@ -7,20 +7,12 @@ phases:
       java: corretto11  
   pre_build:
     commands:
-       - echo code scanning using sonar cube 
-       -mvn verify sonar:sonar
+      - echo code scanning using sonar cube 
+      -mvn verify sonar:sonar
   build:
     commands:
-<<<<<<< HEAD
-       -echo build started on 'date '
-=======
       - echo Build started on `date`
-      #- pwd
-      #- ls -lrta
-      #- ls -lrt $CODEBUILD_SRC_DIR/settings.xml
-      #- cp -pvr $CODEBUILD_SRC_DIR/settings.xml ~/.m2/settings.xml
->>>>>>> ccc4ecbda3a38d4bdc2344bebc6f681972d33135
-       - mvn install 
+      - mvn install 
   post_build:
     commands:
       - echo Build completed on `date`
