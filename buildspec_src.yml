@@ -15,11 +15,7 @@ phases:
        -mvn verify sonar:sonar
   build:
     commands:
-<<<<<<< HEAD
       - echo Build started on `date`
-=======
-       - echo Build started on `date`
->>>>>>> bdbc906a015aeb9fc0265bce18902ab2cb30deef
       #- pwd
       #- ls -lrta
       #- ls -lrt $CODEBUILD_SRC_DIR/settings.xml
