@@ -8,8 +8,7 @@ phases:
   pre_build:
     commands:
       - echo code scanning using sonar cube 
-      #-mvn verify sonar:sonar
-      -mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=mahi-b78am_new-proj
+      -mvn verify sonar:sonar
   build:
     commands:
       - echo Build started on `date`
