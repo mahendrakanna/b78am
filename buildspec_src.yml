@@ -10,7 +10,9 @@ phases:
      # - echo code scanning using sonar cube 
      # - mvn verify sonar:sonar
        - echo connecting to code aws aritifacrt 
-       - export FOR /F "tokens=*" %g IN ('aws codeartifact get-authorization-token --domain cbca --domain-owner 092355029172 --region us-east-1 --query authorizationToken --output text') do (SET CODEARTIFACT_AUTH_TOKEN=%g)
+     # - export FOR /F "tokens=*" %g IN ('aws codeartifact get-authorization-token --domain cbca --domain-owner 092355029172 --region us-east-1 --query authorizationToken --output text') do (SET CODEARTIFACT_AUTH_TOKEN=%g)
+       - export CODEARTIFACT_AUTH_TOKEN= 'aws codeartifact get-authorization-token --domain cbca --domain-owner 092355029172 --region us-east-1 --query authorizationToken --output text'
+ 
   build:
     commands:
       - echo Build started on `date`
