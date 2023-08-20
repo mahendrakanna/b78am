@@ -7,12 +7,14 @@ phases:
       java: corretto11  
   pre_build:
     commands:
-      - echo code scanning using sonar cube 
-      - mvn verify sonar:sonar
+     3 - echo code scanning using sonar cube 
+     # - mvn verify sonar:sonar
+       - echo connecting to code aws aritifacrt 
+       - FOR /F "tokens=*" %g IN ('aws codeartifact get-authorization-token --domain cbca --domain-owner 092355029172 --region us-east-1 --query authorizationToken --output text') do (SET CODEARTIFACT_AUTH_TOKEN=%g)
   build:
     commands:
       - echo Build started on `date`
-      - mvn install 
+      - mvn deploy 
   post_build:
     commands:
       - echo Build completed on `date`
