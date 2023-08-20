@@ -36,22 +36,13 @@
     -->
     
 <distributionManagement>
-    
-    <repository>
-        <id>central</id>
-        <name>a0f4611vllwce-artifactory-primary-0-releases</name>
-        <url>https://cloudbinaryawsdevops.jfrog.io/artifactory/b68am</url>
-    </repository>
-    
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>a0f4611vllwce-artifactory-primary-0-snapshots</name>
-        <url>https://cloudbinaryawsdevops.jfrog.io/artifactory/b68am</url>
-    </snapshotRepository>
-    
+      <repository>
+            <id>cbca-b78am</id>
+            <url>https://cbca-092355029172.d.codeartifact.us-east-1.amazonaws.com/maven/b78am/</url>
+      </repository>
+ 
 </distributionManagement>    
-    
-    
+ 
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
